@@ -1,0 +1,15 @@
+{% extends "admin/base.html" %}
+{% comment %} {% block title %}{% if subtitle %}{{ subtitle }} | {% endif %}{{ title }} | {{ site_title|default:_('Django site admin') }}{% endblock %} {% endcomment %}
+{% block title %}{% if subtitle %}{{ subtitle }} | {% endif %}{{ title }} | djangoproject-polls{% endblock %}
+
+{% comment %} {% block branding %}
+<h1 id="site-name"><a href="{% url 'admin:index' %}">{{ site_header|default:_('Django administration') }}</a></h1>
+{% endblock %} {% endcomment %}
+{% block branding %}
+<h1 id="site-name"><a href="{% url 'admin:index' %}">Polls Administration</a></h1>
+{% endblock %} {% comment %} override template {% endcomment %}
+
+{% comment %} Note that any of Django’s default admin templates can be overridden. To override a template, do the same thing you did with base_site.html
+– copy it from the default directory into your custom directory, and make changes. {% endcomment %}
+
+{% block nav-global %}{% endblock %}

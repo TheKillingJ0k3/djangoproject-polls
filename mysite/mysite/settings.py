@@ -90,10 +90,25 @@ ROOT_URLCONF = 'mysite.urls'
 
 # The default settings file configures a DjangoTemplates backend whose APP_DIRS option is set to True.
 # By convention DjangoTemplates looks for a “templates” subdirectory in each of the INSTALLED_APPS.
+# TEMPLATES = [
+#     {
+#         'BACKEND': 'django.template.backends.django.DjangoTemplates',
+#         'DIRS': [],
+#         'APP_DIRS': True,
+#         'OPTIONS': {
+#             'context_processors': [
+#                 'django.template.context_processors.debug',
+#                 'django.template.context_processors.request',
+#                 'django.contrib.auth.context_processors.auth',
+#                 'django.contrib.messages.context_processors.messages',
+#             ],
+#         },
+#     },
+# ]
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'], # DIRS is a list of filesystem directories to check when loading Django templates; it’s a search path.
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
