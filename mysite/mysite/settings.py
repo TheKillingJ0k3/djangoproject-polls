@@ -40,6 +40,10 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 #  we need to tell the admin that Question objects have an admin interface. To do this, open the polls/admin.py file
 
 #initialize git repo
+# create github repo then use $ git remote add origin https://github.com/<your-github-username>/my-first-blog.git
+# $ git push -u origin main
+
+# views: URLconf maps URL patterns to views
 
 
 from pathlib import Path
@@ -84,6 +88,8 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'mysite.urls'
 
+# The default settings file configures a DjangoTemplates backend whose APP_DIRS option is set to True.
+# By convention DjangoTemplates looks for a “templates” subdirectory in each of the INSTALLED_APPS.
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
